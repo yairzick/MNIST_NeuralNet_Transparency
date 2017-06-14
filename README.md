@@ -7,4 +7,5 @@ MNIST is too simple in terms of pattern that there is no significant change in d
 ### Model 1: Neural Network with no hidden layer
 - Architecture: input layer -> softmax -> output layer
 - The plot of weight seems randomly uniform, no clear patter suggest a correlation to  
+![Alt text](../img/model1.png?raw=true "Optional Title")
 TODO LIST:
