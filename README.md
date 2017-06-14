@@ -24,8 +24,10 @@ It is no doubt that the image after being processed via this filter (weight) wou
 
 ### Model 2: Neural Network with 1 hidden layer
 - Architecture: (input layer(28\*28) \* weight) -> sigmoid -> (hidden layer(100) \* weight) -> softmax -> output layer(10)
-- Similar observations were made and randomness exists in trained weight. The only difference is a new weight set and layer were added into previous model. Below is image showing the plot of hidden layer, which is expected to give a hint of higher abstract level of digit itself, turned out random as well. 
+- Similar observations were made and randomness exists in trained weight. The only difference is a new weight set and layer were added into previous model. Below is image showing the plot of hidden layer, which is expected to give a hint of higher abstract level of digit itself, turned out to be random as well. 
 ![Alt_text](img/weight_img_model2.png?raw=true "Weight and Image")
+- Yet the new hidden layer seems to be meaningless, I still apply LIME on it to see whether it makes difference. Apparently, it shows no promising result.
+![Alt text](img/model2_sample.png?raw=true)
 
 ### Model 3: Neural Network with 1 hidden layer
 - Architecture: (input layer(28\*28) \* weight) -> sigmoid -> (hidden layer(100) \* weight) -> sigmoid -> (hidden layer(49) \* weight)-> softmax -> output layer(10)
