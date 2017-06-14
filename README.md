@@ -31,9 +31,9 @@ It is no doubt that the image after being processed via this filter (weight) wou
 
 ### Model 3: Neural Network with 3 hidden layers
 - Architecture: (input layer(28\*28) \* weight) -> sigmoid -> (hidden layer(100) \* weight) -> sigmoid -> (hidden layer(49) \* weight)-> softmax -> output layer(10)
-- I want to make sure no The last thing we need to do is observing pattern of additional layer.  
+- No additional observation. For seeing example from LIME as in above models, check [here](https://github.com/hovinh/MNIST_NeuralNet_Transparency/blob/mnist_neuralnet_lime/MNIST_Neural%20Network.ipynb) .  
 
 ## Conclusion
-This is a first attempt to observe how LIME works on a typical dataset, namely, MNIST along with a typical machine learning technique, Fully Connected Neural Network. Despite the fact that the model works pretty well and LIME can show how much each digits contribute to the final prediction, providing explanations yet seem unsatisfied to me. On the bright side, we can now cross Neural Network from our to-do-list, and look forward doing new things with more promissing architecture such as Convolutional Neural Network. Other things are worth to note:
+This is a first attempt to observe how LIME works on a typical dataset, namely, MNIST along with a typical machine learning technique, Fully Connected Neural Network. Despite the fact that the model works pretty well and LIME can show how much each digits contribute to the final prediction, providing explanations yet seem unsatisfied to me. On the bright side, we can now cross out Neural Network from our to-do-list, and look forward doing new things with more promissing architecture such as Convolutional Neural Network. Other things are worth to note:
 - Try new data set, especially the "Typical" one(update later when I've found the original paper). 
 - Any idea or comment?
