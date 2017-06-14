@@ -15,24 +15,25 @@ An example of LIME, with input is an image and output is the influence of each p
 ## Experiment
 With aforementioned dataset, number of iterations (the number of times to do backpropagation) is 2000 for every model. I found this number is enough to reach an accuracy ![equation](https://latex.codecogs.com/gif.latex?\geq&space;90) for every model.
 ### Model 1: Neural Network with no hidden layer
-- Architecture: (input layer(28*28) \* weight) -> softmax -> output layer(10)
+- Architecture: (input layer(28\*28) \* weight) -> softmax -> output layer(10)
 - The plot of weight seems to be randomly uniform, there is no clear patter suggests a correlation to any digits from 0 to 9. 
 ![Alt text](img/model1_weight.png?raw=true)
 
 It is no doubt that the image after being processed via this filter (weight) would be saturated into random as well, hence my guess for its yet powerful prediction is the difference in mean of weight set for each digit. The weights in below image are different from each other because they were retrained, however the color bandwidth show similar color distribution. Which leads to the conclusion that they make prediction by training the mean weight to be in some particular range of value. Note that the weight of 0 has a tiny circle in the center which can give a hint somehow it captures the shape of digit 0, however no more obvious evidence in the others. 
 ![Alt text](img/model1_sample.png?raw=true) 
 
-### Model 2: Neural Network with 1 hidden layer
+### Model 2: Neural Network with 2 hidden layers
 - Architecture: (input layer(28\*28) \* weight) -> sigmoid -> (hidden layer(100) \* weight) -> softmax -> output layer(10)
-- Similar observations were made and randomness exists in trained weight. The only difference is a new weight set and layer were added into previous model. Below is image showing the plot of hidden layer, which is expected to give a hint of higher abstract level of digit itself, turned out to be random as well. 
+- Similar observations were made and randomness exists in trained weights. The only difference is a new weight set and layer were added into previous model. Below is image showing the plot of hidden layer, which is expected to give a hint of higher abstract level of digit itself, turned out to be random as well. 
 ![Alt_text](img/weight_img_model2.png?raw=true "Weight and Image")
 - Yet the new hidden layer seems to be meaningless, I still apply LIME on it to see whether it makes difference. Apparently, it shows no promising result.
 ![Alt text](img/model2_sample.png?raw=true)
 
-### Model 3: Neural Network with 1 hidden layer
+### Model 3: Neural Network with 3 hidden layers
 - Architecture: (input layer(28\*28) \* weight) -> sigmoid -> (hidden layer(100) \* weight) -> sigmoid -> (hidden layer(49) \* weight)-> softmax -> output layer(10)
--   
+- I want to make sure no The last thing we need to do is observing pattern of additional layer.  
 
-
-
-TODO LIST:
+## Conclusion
+This is a first attempt to observe how LIME works on a typical dataset, namely, MNIST along with a typical machine learning technique, Fully Connected Neural Network. Despite the fact that the model works pretty well and LIME can show how much each digits contribute to the final prediction, providing explanations yet seem unsatisfied to me. On the bright side, we can now cross Neural Network from our to-do-list, and look forward doing new things with more promissing architecture such as Convolutional Neural Network. Other things are worth to note:
+- Try new data set, especially the "Typical" one(update later when I've found the original paper). 
+- Any idea or comment?
