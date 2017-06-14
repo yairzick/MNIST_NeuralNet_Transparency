@@ -11,4 +11,7 @@ With aforementioned dataset, number of iterations (the number of times do backpr
 - The plot of weight seems randomly uniform, there is no clear patter suggests a correlation to any digits from 0 to 9. 
 ![Alt text](img/model1_weight.png?raw=true "Optional Title")
 - 
+
+
+![Alt_text](img/weight_img_model2.png?raw=true)
 TODO LIST:
